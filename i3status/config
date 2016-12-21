@@ -1,0 +1,88 @@
+general {
+    output_format = "i3bar"
+    colors = true
+    interval = 1
+}
+
+# order += "ipv6"
+# order += "run_watch DHCP"
+# order += "run_watch VPNC"
+# order += "path_exists VPN"
+order += "wireless wlp8s0"
+order += "ethernet enp9s0"
+order += "volume master"
+order += "disk /"
+order += "load"
+order += "cpu_temperature 0"
+order += "battery 0"
+order += "tztime local"
+order += "new"
+
+wireless wlp8s0 {
+    # format_up = "w: %essid, %bitrate, %quality, %ip"
+    format_up = " %essid %quality"
+    format_down = "?"
+}
+
+ethernet enp9s0 {
+    # if you use %speed, i3status requires the cap_net_admin capability
+    # format_up = "e: %ip %speed"
+    format_up = " %ip"
+    format_down = ""
+}
+
+run_watch DHCP {
+    pidfile = "/var/run/dhclient*.pid"
+}
+
+run_watch VPNC {
+    # file containing the PID of a vpnc process
+    pidfile = "/var/run/vpnc/pid"
+}
+
+path_exists VPN {
+    # path exists when a VPN tunnel launched by nmcli/nm-applet is active
+    path = "/proc/sys/net/ipv4/conf/tun0"
+}
+
+tztime local {
+    # format = "%Y-%m-%d %l:%M:%S %P"
+    format = "%a %Y.%m.%d %l:%M%P"
+    timezone = "Asia/Kathmandu"
+}
+
+load {
+    format = " %5min"
+}
+
+cpu_temperature 0 {
+    format = "%degrees°C"
+    max_threshold = 60
+    path = "/sys/class/thermal/thermal_zone0/temp"
+}
+
+disk "/" {
+    format = " %free"
+}
+
+battery 0 {
+    format = "%status %percentage %remaining"
+    path = "/sys/class/power_supply/BAT1/uevent"
+    format_down = ""
+    status_bat = ""
+    status_chr = ""
+    status_full = ""
+    low_threshold = 25
+    threshold_type = percentage
+    integer_battery_capacity = true
+    last_full_capacity = true
+    hide_seconds = true
+}
+
+volume master {
+    format = " %volume"
+    format_muted = " %volume"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
