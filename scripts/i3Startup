@@ -1,0 +1,4 @@
+sudo mount /dev/sda1 /media/abinash/Files
+brightness - 0
+pkill gnome-terminal
+officetimer

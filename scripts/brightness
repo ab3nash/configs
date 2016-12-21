@@ -1,0 +1,20 @@
+if [ -z "$1" ] || [ -z "$2" ]; then
+    echo "Usage: brightness <-|+> <delta>"
+    exit 1
+fi
+
+file_brightness='/sys/class/backlight/radeon_bl0/brightness'
+file_max='/sys/class/backlight/radeon_bl0/max_brightness'
+cur=$(cat "$file_brightness")
+max=$(cat "$file_max")
+
+if [ ! -w "$file_brightness" ]; then
+    sudo chown abinash '/sys/class/backlight/radeon_bl0/brightness'
+fi
+
+new=$(($cur $1 $2))
+new=$(($new>$max?$max:$new))
+new=$(($new<0?0:$new))
+echo $new > "$file_brightness"
+echo "New brightness: $new/$max"
+

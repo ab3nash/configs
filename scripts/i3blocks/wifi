@@ -1,0 +1,20 @@
+#!/bin/bash
+
+ESSID=`iwgetid -r`
+QUALITY=`grep wlo1 /proc/net/wireless | awk '{print int($3*100/70) }'`
+
+#------------------------------------------------------------------------
+
+echo  $ESSID $QUALITY # full text
+echo $ESSID $QUALITY # short text
+
+# color
+if [[ $QUALITY -ge 50 ]]; then
+    echo "#FFFFFF"
+elif [[ $QUALITY -lt 50 ]]; then
+    echo "#FFF600"
+elif [[ $QUALITY -lt 40 ]]; then
+    echo "#FFAE00"
+elif [[ $QUALITY -lt 25 ]]; then
+    echo "#FF0000"
+fi

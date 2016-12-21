@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ ! $(date +%a) = "Sun" -a ! $(date +%a) = "Sat" ] ; then
+    weekend=0
+else
+    weekend=1
+fi
+
+if [ ! $(date +%H) -gt 17 -a ! $(date +%H) -lt 9 ] ; then
+    officetime=1
+else
+    officetime=0
+fi
+
+if [ $weekend == 0 -a $officetime == 1 ] ; then
+    skype
+fi
+
+exit 1
