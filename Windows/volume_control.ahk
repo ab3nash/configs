@@ -5,19 +5,19 @@
 */
 #notrayicon
 
-#Up:: 
+#NumpadAdd::                    ;Windows(#) + Numpad_+(NumpadAdd) for volume up
 SoundSet +3 
 SoundSet, +3, wave 
 gosub, vupdt 
 return 
 
-#Down:: 
+#NumpadSub::                    ;Windows(#) + Numpad_-(NumpadSub) for volume down
 SoundSet -3 
 SoundSet, -3, wave 
 gosub, vupdt 
 return 
 
-#Left:: 
+#NumpadDiv::                    ;Windows(#) + Numpad_/(NumpadDiv) for microphone un/mute
 SoundSet, -0, Microphone, mute 
 IfWinExist, volume 
 { 
@@ -32,7 +32,7 @@ return
 Gosub, show 
 Return 
 
-#Right:: 
+#NumpadMult::                   ;Windows(#) + Numpad_*(NumpadMult) for speaker un/mute
 SoundSet, -0, MASTER, mute 
 IfWinExist, volume 
 { 

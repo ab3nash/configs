@@ -8,12 +8,12 @@
   * the next 7 lines setup the hotkeys for the script. 
   */
 globalDesktopManager := new JPGIncDesktopManagerClass()
-globalDesktopManager.setGoToDesktop("#")
-    .setMoveWindowToDesktop("#+")
-    .setGoToNextDesktop("#l")
-    .setGoToPreviousDesktop("#h")
-    .setMoveWindowToNextDesktop("#+l")
-    .setMoveWindowToPreviousDesktop("#+h")
+globalDesktopManager.setGoToDesktop("#") 			
+    .setMoveWindowToDesktop("#+")			;Windows(#) + Shift(+) to move window to another desktop
+    .setGoToNextDesktop("#l")				;Windows(#) + (l) to move to next desktop
+    .setGoToPreviousDesktop("#h")			;Windows(#) + (h) to move to previous desktop
+    .setMoveWindowToNextDesktop("#+l")		;Windows(#) + Shift(+) + (l) to move window to next desktop
+    .setMoveWindowToPreviousDesktop("#+h")	;Windows(#) + Shift(+) + (h) to move window to previous desktop
 
 return
 
