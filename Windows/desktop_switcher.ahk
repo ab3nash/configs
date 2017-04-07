@@ -14,6 +14,11 @@ globalDesktopManager.setGoToDesktop("#")
     .setGoToPreviousDesktop("#h")			;Windows(#) + (h) to move to previous desktop
     .setMoveWindowToNextDesktop("#+l")		;Windows(#) + Shift(+) + (l) to move window to next desktop
     .setMoveWindowToPreviousDesktop("#+h")	;Windows(#) + Shift(+) + (h) to move window to previous desktop
+	
+#q:: 										; Windows(#) + (q) to close active window
+WinGetTitle, Title, A
+PostMessage, 0x112, 0xF060,,, %Title%
+return
 
 return
 
