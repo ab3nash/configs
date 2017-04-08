@@ -1,6 +1,8 @@
-# AutoHotKey Configs for Windows
-
-1) desktop_control: Hotkeys to control creation and termination virtual desktops, switch between virtual desktops and move windows between virtual desktops.
+AutoHotKey Configs for Windows
+==============================
+desktop_control:
+----------------
+Hotkeys to control creation and termination virtual desktops, switch between virtual desktops and move windows between virtual desktops.
     Windows + Q = Close active window
     Windows + Shift + D = Create a new Virtual Desktop
     Windows + Shift + X = Terminate current Virtual Desktop
@@ -10,7 +12,9 @@
     Windows + Shift + Number Key (x) = Move active window to Virtual Desktop number x
     
       
-2) power_control: Hotkeys to control power options (shutdown, logout, sleep, restart, and lock).
+power_control: 
+--------------
+Hotkeys to control power options (shutdown, logout, sleep, restart, and lock).
     Windows + Shift + Q followed by:
       S = Sleep
       Shift + S = Shutdown
@@ -18,7 +22,9 @@
       Shift + L = Logout
       R = Restart
       
-3) volume_control: Hotkeys to control speaker volume, and mute/unmute microphone and/or speakers.
+volume_control: 
+---------------
+Hotkeys to control speaker volume, and mute/unmute microphone and/or speakers.
       Windows + Numpad [+] = Volume Up
       Windows + Numpad [-] = Volume Down
       Windows + Numpad [*] = Un/Mute Speakers
