@@ -625,13 +625,13 @@ class JPGIncDesktopManagerClass
 	 * end public api
 	 */
 	
-	newDesktop(hotkeyCombo := "#+d")
+newDesktop(hotkeyCombo := "#+d")			;Windows(#) + Shift(+) + d to create new virtual desktop
 	{
 		send("^#d")
 		return this
 	}
 	
-	closeDesktop(hotkeyCombo := "#+x")
+	closeDesktop(hotkeyCombo := "#+x")		;Windows(#) + Shift(+) + x to terminate current virtual desktop
 	{
 		send("^#{f4}")
 		return this
