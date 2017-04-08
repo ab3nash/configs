@@ -22,8 +22,6 @@ return
 
 return
 
-#c::ExitApp
-
 debugger(message) 
 {
 	return
