@@ -625,13 +625,13 @@ class JPGIncDesktopManagerClass
 	 * end public api
 	 */
 	
-	newDesktop(hotkeyCombo := "")
+	newDesktop(hotkeyCombo := "#+d")
 	{
 		send("^#d")
 		return this
 	}
 	
-	closeDesktop(hotkeyCombo := "")
+	closeDesktop(hotkeyCombo := "#+x")
 	{
 		send("^#{f4}")
 		return this
