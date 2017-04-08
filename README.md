@@ -1,6 +1,6 @@
 AutoHotKey Configs for Windows
 ==============================
-Please edit hotkey scripts' hotkey declarations to personalize hotkeys.
+Please edit hotkey scripts' hotkey declarations to personalize hotkeys. Refer to [Autohotkey Documentation](https://autohotkey.com/docs/AutoHotkey.htm) for further details and instructions.
 
 desktop_control:
 ----------------
