@@ -1,5 +1,7 @@
 AutoHotKey Configs for Windows
 ==============================
+Please edit hotkey scripts hotkey declarations to personalize hotkeys.
+
 desktop_control:
 ----------------
 Hotkeys to control creation and termination virtual desktops, switch between virtual desktops and move windows between virtual desktops.
@@ -24,7 +26,7 @@ Hotkeys to control power options (shutdown, logout, sleep, restart, and lock).
       
 volume_control: 
 ---------------
-Hotkeys to control speaker volume, and mute/unmute microphone and/or speakers.
+Hotkeys to control speaker volume, and mute/unmute microphone and/or speakers for non-multimedia keyboards.
 * Windows + Numpad [+] = Volume Up
 * Windows + Numpad [-] = Volume Down
 * Windows + Numpad [*] = Un/Mute Speakers
